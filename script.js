@@ -129,6 +129,20 @@ function removeFromCart(productId) {
     renderCartItems();
 }
 
+function updateQuantity(productId, change) {
+    const item = cart.find(item => item.id === productId);
+    if (!item) return;
+
+    item.quantity += change;
+    if (item.quantity <= 0) {
+        removeFromCart(productId);
+    } else {
+        saveCart();
+        updateCartBadge();
+        renderCartItems();
+    }
+}
+
 function saveCart() {
     localStorage.setItem('evim_ceyiz_cart', JSON.stringify(cart));
 }
@@ -236,9 +250,16 @@ function renderCartItems() {
         itemEl.innerHTML = `
             <img src="${mainImage}" alt="${item.urunAdi}" onerror="this.src='https://via.placeholder.com/60'">
             <div class="cart-item-info">
-                <div class="cart-item-title">${item.urunAdi} (x${item.quantity})</div>
+                <div class="cart-item-title">${item.urunAdi}</div>
                 <div class="cart-item-price">${(item.fiyat * item.quantity).toFixed(2)} TL</div>
-                <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">Kaldır</button>
+                <div class="cart-item-actions">
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+                        <span class="qty-text">${item.quantity}</span>
+                        <button class="qty-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                    </div>
+                    <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">Kaldır</button>
+                </div>
             </div>
         `;
         container.appendChild(itemEl);
