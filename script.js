@@ -160,6 +160,9 @@ function injectCartModal() {
                         <span>Ara Toplam:</span>
                         <span id="cart-total-price">0.00 TL</span>
                     </div>
+                    <button onclick="closeCart()" class="continue-btn" style="margin-top: 1rem;">
+                        🛍️ Alışverişe Devam Et
+                    </button>
                 </div>
                 <div class="cart-checkout-section">
                     <div class="checkout-form">

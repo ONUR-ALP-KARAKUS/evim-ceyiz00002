@@ -459,6 +459,29 @@ main {
     background-color: #1ebe57;
 }
 
+.continue-btn {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.continue-btn:hover {
+    background-color: var(--bg-light);
+    border-color: var(--text-light);
+}
+
 /* Footer */
 footer {
     background-color: var(--text-dark);
