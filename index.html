@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evim Çeyiz - Ana Sayfa</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Header & Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="/index.html" class="logo">Evim Çeyiz</a>
+            <ul class="nav-links">
+                <li><a href="/index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="/urun.html">Ürünler</a></li>
+                <li><a href="/kampanyalar.html">Kampanyalar</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <button class="cart-btn" onclick="openCart()">
+                🛒 Sepetim
+                <span id="cart-badge" class="cart-badge" style="display: none;">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Evim Çeyiz'e Hoş Geldiniz</h1>
+        <p>Eviniz için en şık züccaciye ve çeyiz ürünleri en uygun fiyatlarla burada. Kaliteyi evinize taşıyın.</p>
+        <a href="/urun.html" class="btn-primary">Tüm Ürünleri İncele</a>
+    </section>
+
+    <!-- Featured Products -->
+    <main>
+        <h2 class="section-title">Öne Çıkan Ürünler</h2>
+        <div id="featured-products" class="product-grid">
+            <!-- Products will be loaded here by script.js -->
+            <p style="text-align:center; grid-column: 1/-1;">Ürünler yükleniyor...</p>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <footer id="iletisim">
+        <h2>İletişim</h2>
+        <p>Bize WhatsApp üzerinden ulaşabilirsiniz.</p>
+        <p><strong>Telefon:</strong> +90 536 882 24 22</p>
+        <p><strong>Adres:</strong> Evim Çeyiz Mağazası, Türkiye</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #aaa;">&copy; 2026 Evim Çeyiz. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/script.js"></script>
+</body>
+</html>
+
