@@ -325,7 +325,7 @@ function sendWhatsAppOrder() {
     
     message += `Siparişimin işleme alınmasını rica ederim. İyi çalışmalar.`;
 
-    const waNumber = '905368822422';
+    const waNumber = '905050377276';
     // api.whatsapp.com is generally more reliable for cross-device compatibility
     const waUrl = `https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`;
     
